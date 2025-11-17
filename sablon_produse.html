@@ -7,6 +7,7 @@
     <link rel="icon" type="image" href="otto.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100  text-gray-800">
     <header class="bg-amber-800 text-white py-4 shadow-md">
@@ -73,7 +74,12 @@
         </div>
         <div class="w-full md:w-1/2 p-4">  
             <div class="text-xl font-bold">DESCRIERIE PRODUS</div>
-            <a href="cos.html" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg mt-4 hover:bg-blue-700">CUMPARA</a>
+            <button class="cumpara-btn bg-amber-800 text-white px-6 py-2 rounded-lg mt-4 hover:bg-amber-700"
+                    data-id="produs_001" 
+                    data-nume="Numele Produsului" 
+                    data-pret="99.99">
+                                    Adaugă în coș
+            </button>
         </div>
     </div>
     <footer class="bg-amber-800 text-white py-4 shadow-md mt-auto">      

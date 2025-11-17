@@ -6,6 +6,7 @@
     <title>Coș de cumpărături - OttoShop</title>
     <link rel="icon" type="image" href="otto.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body class="flex flex-col min-h-screen bg-gray-100  text-gray-800">
@@ -19,6 +20,17 @@
             </nav>
         </div>
     </header>
+    <main class="flex-grow container mx-auto p-8">
+        <h2 class="text-3xl font-bold mb-6">🛒 Coșul tău de cumpărături</h2>
+        <div id="continut-cos" class="bg-white p-6 rounded-lg shadow-lg"></div>
+        <div class="mt-6 text-right">
+            <h3 class="text-xl font-semibold">Total Produse: <span id="total-produse">0</span></h3>
+            <h3 class="text-2xl font-bold mt-2">Total Preț: <span id="total-pret">0.00</span> RON</h3>
+            <button class="bg-green-600 text-white px-8 py-3 rounded-lg mt-4 hover:bg-green-700 font-bold">
+                Finalizează Comanda
+            </button>
+        </div>
+    </main>
     <footer class="bg-amber-800 text-white py-4 shadow-md mt-auto">      
         <div class="text-center font-bold text-xs possi">Copyright © 2025, Animax. Sustinut de eCommerce-Today</div>
     </footer>
