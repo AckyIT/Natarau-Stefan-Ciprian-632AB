@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;   
+    text-align: center;       
+    margin-top: 100px;          
+    background-color: #eee;    
+}
+
+div {
+    margin-top: 20px;          
+    padding: 10px;
+    border: 1px solid #ccc;    
+    display: inline-block;    
+    background-color: white;
+}
+button,input,ul
+{
+    padding: 10px;
+    margin-top: 20px;
+}
+.ascuns 
+{
+    display: none;
+}
