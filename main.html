@@ -1,76 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-    <link rel="icon" type="image" href="otto.jpg">
+    <title>ShreckMagnificul - Catalog</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
-<body class="flex flex-col min-h-screen bg-gray-100  text-gray-800">
-    <header class="bg-amber-800 text-white py-4 shadow-md">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold">OttoShop</h1>
-            <nav>
-                <a href="main.html" class="px-3 hover:underline">Acasa</a>
-                <a href="cos.html" class="px-3 hover:underline">Cos</a>
-                <a href="donatii.html" class="px-3 hover:underline">Donatii</a>
-            </nav>
+<body class="bg-gray-100 p-8 font-sans">
+
+    <div class="max-w-2xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+        
+        <div class="bg-blue-600 p-6">
+            <h2 class="text-2xl font-bold text-white text-center">Catalog Studenți</h2>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Caini</button>
-            <div class="dropdown-content">
-                <a href="caini/caini_an.html">Animale</a>
-                <a href="caini/caini_m.html">Mancare</a>
-                <a href="caini/caini_ac.html">Accesorii</a>
+
+        <div class="p-6">
+            <div class="mb-8 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Adaugă un student nou</h3>
+                
+                <form id="formStudent" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nume Student</label>
+                        <input type="text" id="nume" required
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                            placeholder="Ex: Shrek cel Viteaz">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Anul (1-4)</label>
+                            <input type="number" id="an" min="1" max="4" required
+                                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                                placeholder="1">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Media</label>
+                            <input type="number" step="0.01" min="1" max="10" id="media" required
+                                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                                placeholder="9.50">
+                        </div>
+                    </div>
+
+                    <button type="submit" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg transition duration-200">
+                        Salvează Student
+                    </button>
+                </form>
+            </div>
+
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">Listă Studenți</h3>
+            <div class="overflow-x-auto rounded-lg border border-gray-200">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-gray-100 border-b">
+                        <tr>
+                            <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nume</th>
+                            <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Anul</th>
+                            <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Media</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaStudenti" class="divide-y divide-gray-200"></tbody>
+                </table>
             </div>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Pisici</button>
-            <div class="dropdown-content">
-                <a href="pisici/pisici_an.html">Animale</a>
-                <a href="pisici/pisici_m.html">Mancare</a>
-                <a href="pisici/pisici_ac.html">Accesorii</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Pasari</button>
-            <div class="dropdown-content">
-                <a href="pasari/pasari_an.html">Animale</a>
-                <a href="pasari/pasari_m.html">Mancare</a>
-                <a href="pasari/pasari_ac.html">Accesorii</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Rozatoare</button>
-            <div class="dropdown-content">
-                <a href="rozatoare/rozatoare_an.html">Animale</a>
-                <a href="rozatoare/rozatoare_m.html">Mancare</a>
-                <a href="rozatoare/rozatoare_ac.html">Accesorii</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Pesti</button>
-            <div class="dropdown-content">
-                <a href="pesti/pesti_an.html">Animale</a>
-                <a href="pesti/pesti_m.html">Mancare</a>
-                <a href="pesti/pesti_ac.html">Accesorii</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Retpile</button>
-            <div class="dropdown-content">
-                <a href="reptile/reptile_an.html">Animale</a>
-                <a href="reptile/reptile_m.html">Mancare</a>
-                <a href="reptile/reptile_ac.html">Accesorii</a>
-            </div>
-        </div>
-    </header>
-    <img src="otto.jpg" alt="">
-    <footer class="bg-amber-800 text-white py-4 shadow-md mt-auto">      
-        <div class="text-center font-bold text-xs possi">Copyright © 2025</div>
-    </footer>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
